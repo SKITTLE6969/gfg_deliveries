@@ -1,3 +1,4 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 local ox_inventory = exports.ox_inventory
 Locale = {}
 deliveryPeds = {}
