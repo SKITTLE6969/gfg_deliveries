@@ -1,4 +1,5 @@
-local ox_inventory = exports.ox_inventory
+
+local QBCore = exports['qb-core']:GetCoreObject()
 local deliveryPeds = {}
 Locale = {}
 local menuOpen = false
