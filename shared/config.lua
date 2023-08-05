@@ -13,8 +13,8 @@ Config = {
         bob = true,                                             -- Determines wether the marker bobs up and down.
         faceCamera = true                                       -- Determines if the marker always faces the camera.
     },
-    inventory = "ox_inventory",                                 -- Determines wich inventory resource to use. Currently supported options are: "ox_inventory", "qb_inventory" or "custom".
-    useKeys = true,                                             -- Determines wether or not to trigger the give and remove keys function in sv_customize.lua.
+    inventory = "qb_inventory",                                 -- Determines wich inventory resource to use. Currently supported options are: "ox_inventory", "qb_inventory" or "custom".
+    useKeys = false,                                             -- Determines wether or not to trigger the give and remove keys function in sv_customize.lua.
 }
 
 Config.Defaults = {                                             -- Configuration for the default values used if specific variable for a delivery type are omitted.
