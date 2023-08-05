@@ -1,3 +1,4 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 -- Item Payout Function
 function itemPayout(source, item, amount)
     --[[
@@ -17,7 +18,7 @@ function bankPayout(source, amount)
         amount = the calculated amount they should receive
     ]]
 
-    local xPlayer = ESX.GetPlayerFromId(source)
+    local xPlayer = QBCore.Functions.GetPlayer(source)
     xPlayer.addAccountMoney('bank', amount)
 end
 
@@ -34,7 +35,7 @@ function removeKeys(source, plate)
         local playerItems = exports.ox_inventory:GetInventoryItems(source)
         for k, v in pairs(playerItems) do
             if v.name == 'carkeys' and tostring(v.metadata.plate):match( "^%s*(.-)%s*$" ) == plate:match( "^%s*(.-)%s*$" ) then
-                local xPlayer = ESX.GetPlayerFromId(source)
+                local xPlayer = QBCore.Functions.GetPlayer(source)
                 exports.ox_inventory:RemoveItem(source, 'carkeys', 1, false, v.slot)
                 break
             end
